@@ -16,6 +16,7 @@ export class MemberFormComponent implements OnInit{
   }
   //initialisation de form
   ngOnInit(){
+    //recuperer id de la route
     this.form=new FormGroup({
       cin: new FormControl(null),
       name: new FormControl(null),

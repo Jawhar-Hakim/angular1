@@ -22,4 +22,7 @@ export class MemberService {
   AddMember(m:Member):Observable<void>{
     return this.httpClient.post<void>('http://localhost:3000/members',m)
   }
+  DeleteMember(id:string):Observable<void>{
+    return this.httpClient.delete<void>(`http://localhost:3000/members/${id}`)
+  }
 }
