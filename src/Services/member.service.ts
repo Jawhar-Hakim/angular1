@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MemberComponent } from 'src/app/member/member.component';
 import { Member } from 'src/Models/Member';
 
 @Injectable({
@@ -17,5 +18,8 @@ export class MemberService {
     //envoi de requete GET
     return this.httpClient.get<Member[]>
     ("http://localhost:3000/members")
+  }
+  AddMember(m:Member):Observable<void>{
+    return this.httpClient.post<void>('http://localhost:3000/members',m)
   }
 }

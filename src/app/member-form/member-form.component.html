@@ -1,16 +1,24 @@
-<form action="">
-        <p><mat-form-field appearance="fill">
-                        <input matInput placeholder="Placeholder">
-                </mat-form-field></p>
+<form [formGroup]="form" (ngSubmit)="sub()">
+        <p>
+                <mat-form-field appearance="fill">
+                        <input matInput placeholder="cin" formControlName="cin">
+                </mat-form-field>
+        </p>
 
-        <p><mat-form-field appearance="fill">
-                        <input matInput placeholder="Placeholder">
-                </mat-form-field></p>
-        <p><mat-form-field appearance="fill">
-                        <input matInput placeholder="Placeholder">
-                </mat-form-field></p>
-        <p><mat-form-field appearance="fill">
-                        <input matInput placeholder="Placeholder">
-                </mat-form-field></p>
-
+        <p>
+                <mat-form-field appearance="fill">
+                        <input matInput placeholder="name" formControlName="name">
+                </mat-form-field>
+        </p>
+        <p>
+                <mat-form-field appearance="fill">
+                        <input matInput placeholder="type" formControlName="type">
+                </mat-form-field>
+        </p>
+        <p>
+                <mat-form-field appearance="fill">
+                        <input matInput placeholder="createdDate" formControlName="createdDate"> 
+                </mat-form-field>
+        </p>
+        <button type="submit">Submit</button>
 </form>
