@@ -25,4 +25,14 @@ export class MemberService {
   DeleteMember(id:string):Observable<void>{
     return this.httpClient.delete<void>(`http://localhost:3000/members/${id}`)
   }
+  GetMemberByID(id:string):Observable<Member>{
+    return this.httpClient.get<Member>
+    (`http://localhost:3000/members/${id}`)
+  }
+  UpdateMember(id:string,m:Member):Observable<void>{
+    return this.httpClient.put<void>(`http://localhost:3000/members/${id}`,m)
+  }
+  UpdateMember2(id:string,m:Member):Observable<void>{
+    return this.httpClient.patch<void>(`http://localhost:3000/members/${id}`,{Type:'teacher'})
+  }
 }
