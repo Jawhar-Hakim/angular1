@@ -3,5 +3,6 @@ export interface Evt{
         Titre:String,
         DateDebut:String,
         DateFin:String,
-        Lieu:String
+        Lieu:String,
+        Actions:String
 }

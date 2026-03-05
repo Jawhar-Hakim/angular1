@@ -14,4 +14,7 @@ export class EvtService {
   GetAllEvts():Observable<Evt[]>{
     return this.httpClient.get<Evt[]>('http://localhost:3000/EVTS')
   }
+  addEvent(evt:Evt):Observable<void>{
+    return this.httpClient.post<void>('http://localhost:3000/EVTS',evt)
+  }
 }

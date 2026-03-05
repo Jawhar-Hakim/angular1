@@ -23,7 +23,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ToolsComponent } from './tools/tools.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { EventsComponent } from './events/events.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { EvtCreateCompComponent } from './evt-create-comp/evt-create-comp.component'
+import { JsonPipe } from '@angular/common';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     ArticlesComponent,
     EventsComponent,
     DashboardComponent,
+    EvtCreateCompComponent,
     
   ],
   imports: [
@@ -54,7 +59,10 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule,
+    ReactiveFormsModule,JsonPipe,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

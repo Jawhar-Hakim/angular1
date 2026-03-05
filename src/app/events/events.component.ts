@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Evt } from 'src/Models/Evt';
 import { EvtService } from 'src/Services/evt.service';
+import { EvtCreateCompComponent } from '../evt-create-comp/evt-create-comp.component';
 
 @Component({
   selector: 'app-events',
@@ -11,15 +12,29 @@ import { EvtService } from 'src/Services/evt.service';
 })
 export class EventsComponent {
   constructor(private ES:EvtService,private dialog:MatDialog){}
-  displayedColumns: string[] = ['id', 'Titre', 'DateDebut', 'DateFin', 'Lieu'];
+  displayedColumns: string[] = ['id', 'Titre', 'DateDebut', 'DateFin', 'Lieu','Actions'];
   dataSource=new MatTableDataSource<Evt>()
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-  ngOnInit():void{
+  fetch(){
     this.ES.GetAllEvts().subscribe((res)=>{
       this.dataSource.data=res
+    })
+  }
+  ngOnInit():void{
+    this.fetch()
+  }
+
+  open(){
+    let x = this.dialog.open(EvtCreateCompComponent)
+    x.afterClosed().subscribe((data)=>{
+      if(data){
+        this.ES.addEvent(data).subscribe(()=>{
+          this.fetch()
+        })
+      }
     })
   }
 }
