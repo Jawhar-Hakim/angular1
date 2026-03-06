@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Evt } from 'src/Models/Evt';
 import { EvtService } from 'src/Services/evt.service';
@@ -35,6 +35,16 @@ export class EventsComponent {
           this.fetch()
         })
       }
+    })
+  }
+  openEdit(id:String){
+    const param = new MatDialogConfig();
+    param.data=id
+    let x = this.dialog.open(EvtCreateCompComponent,param)
+    x.afterClosed().subscribe((res)=>{
+      this.ES.updateEvent(res,id).subscribe(()=>{
+        this.fetch()
+      })
     })
   }
 }

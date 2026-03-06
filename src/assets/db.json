@@ -25,18 +25,12 @@
   ],
   "EVTS": [
     {
-      "id": "hihi",
-      "Titre": "Sport",
-      "DateDebut": "12/12/12",
-      "DateFin": "10/10/13",
-      "Lieu": "Sfax"
+      "Titre": null,
+      "DateDebut": null,
+      "id": "hihi"
     },
     {
-      "id": "hihi2",
-      "Titre": "Sport2",
-      "DateDebut": "12/12/12",
-      "DateFin": "10/10/13",
-      "Lieu": "Sfax"
+      "id": "hihi2"
     },
     {
       "id": "f25d",
