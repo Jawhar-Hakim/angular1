@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MemberComponent } from './member/member.component';
@@ -28,6 +28,7 @@ import { EvtCreateCompComponent } from './evt-create-comp/evt-create-comp.compon
 import { JsonPipe } from '@angular/common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatMenuModule,
     MatDatepickerModule,
     ReactiveFormsModule,JsonPipe,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatSortModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
