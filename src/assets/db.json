@@ -16,51 +16,70 @@
       "id": "b336"
     },
     {
-      "id": "0094",
       "cin": "159159",
       "name": "eqrkg,qeklr",
       "type": "qeroqg",
-      "createdDate": "12/12/12"
+      "createdDate": "12/12/12",
+      "id": "0094"
     }
   ],
   "EVTS": [
     {
-      "Titre": null,
-      "DateDebut": null,
-      "id": "hihi"
+      "id": "hihi",
+      "Titre": "test",
+      "DateDebut": "2026-04-03T23:00:00.000Z",
+      "DateFin": "2026-04-10T23:00:00.000Z",
+      "Lieu": "sousse",
+      "Actions": null
     },
     {
-      "Titre": null,
-      "DateDebut": null,
-      "id": "hihi2"
+      "id": "hihi2",
+      "Titre": "aa",
+      "DateDebut": "2026-03-31T23:00:00.000Z",
+      "DateFin": "2026-04-01T23:00:00.000Z",
+      "Lieu": "aa",
+      "Actions": null
     },
     {
       "id": "f25d",
       "Titre": "sport3",
-      "DateDebut": "12/12/12",
-      "DateFin": "12/12/12",
-      "Lieu": "sfaxxxx"
+      "DateDebut": "2012-12-11T23:00:00.000Z",
+      "DateFin": "2012-12-11T23:00:00.000Z",
+      "Lieu": "sfax",
+      "Actions": null
     },
     {
       "id": "ed67",
       "Titre": "hello",
-      "DateDebut": "10/10/10",
-      "DateFin": "12/12/12",
-      "Lieu": "qsbd"
+      "DateDebut": "2010-10-09T23:00:00.000Z",
+      "DateFin": "2012-12-11T23:00:00.000Z",
+      "Lieu": "q",
+      "Actions": null
     },
     {
       "id": "c8e2",
       "Titre": "qdsf",
-      "DateDebut": "12/12/12",
-      "DateFin": "12/12/12",
-      "Lieu": "qzqdsf"
+      "DateDebut": "2012-12-11T23:00:00.000Z",
+      "DateFin": "2012-12-13T23:00:00.000Z",
+      "Lieu": "jjj",
+      "Actions": null
     },
     {
       "id": "3bff",
-      "Titre": "eaez",
-      "DateDebut": null,
-      "DateFin": null,
-      "Lieu": "ezaezf"
+      "Titre": "ji",
+      "DateDebut": "2026-04-02T23:00:00.000Z",
+      "DateFin": "2026-04-09T23:00:00.000Z",
+      "Lieu": "jj",
+      "Actions": null
+    },
+    {
+      "id": "3b10",
+      "Titre": "jjj",
+      "DateDebut": "2026-03-31T23:00:00.000Z",
+      "DateFin": "2026-04-08T23:00:00.000Z",
+      "Lieu": "hhh",
+      "Actions": null
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
