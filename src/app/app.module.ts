@@ -29,7 +29,9 @@ import { JsonPipe } from '@angular/common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatSort, MatSortModule } from '@angular/material/sort';
-
+import { firebaseConfig } from './environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +68,8 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
     MatNativeDateModule,
     MatPaginatorModule,
     MatSortModule,
- 
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
