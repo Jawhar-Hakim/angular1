@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ToolsComponent } from './tools/tools.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { EventsComponent } from './events/events.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
   {
     path:"",
     pathMatch:"full",
-    component:MemberComponent
+    component:LoginComponent
   },
   {
     path:"edit/:id",
