@@ -42,11 +42,11 @@ export class MemberFormComponent implements OnInit {
     console.log(this.form.value)
     if(this.idcourant){
       this.MS.UpdateMember(this.idcourant,this.form.value).subscribe(()=>{
-        this.router.navigate([''])
+        this.router.navigate(['member'])
       })
     }
     else{this.MS.AddMember(this.form.value).subscribe(() => {
-      this.router.navigate([''])
+      this.router.navigate(['member'])
     })}
   }
 }
