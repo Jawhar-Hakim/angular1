@@ -1,0 +1,17 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.dashboard-card {
+  min-height: 150px;
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 12px;
+  color: rgba(0, 0, 0, 0.87);
+}

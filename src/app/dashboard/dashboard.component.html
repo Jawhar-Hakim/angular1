@@ -1,25 +1,70 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>NbMembers</mat-card-title>
-    <mat-card-subtitle>{{NbMembers}}</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>NbEvents</mat-card-title>
-    <mat-card-subtitle>{{NbEvents}}</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>NbTools</mat-card-title>
-    <mat-card-subtitle>{{NbTools}}</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
+<div class="dashboard-grid">
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Nombre de membres</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="stat-value">{{ memberCount }}</div>
+    </mat-card-content>
+  </mat-card>
 
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>NbArticles</mat-card-title>
-    <mat-card-subtitle>{{NbArticles}}</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Nombre d'événements</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="stat-value">{{ eventCount }}</div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Nombre d'outils</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="stat-value">{{ toolsCount }}</div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="dashboard-card">
+    <mat-card-header>
+      <mat-card-title>Nombre d'articles</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="stat-value">{{ articlesCount }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div style="display: flex;justify-content: space-around;height:1000px">
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [type]="'line'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+    >
+    </canvas>
+  </div>
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [type]="'pie'"
+      [datasets]="chartDataPie"
+      [labels]="chartLabelsPie"
+      [options]="chartOptions"
+    >
+    </canvas>
+  </div>
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [type]="'doughnut'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+    >
+    </canvas>
+  </div>
+</div>

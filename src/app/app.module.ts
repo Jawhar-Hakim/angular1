@@ -34,6 +34,7 @@ import { firebaseConfig } from './environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { LoginComponent } from './login/login.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { LoginComponent } from './login/login.component';
     MatPaginatorModule,
     MatSortModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,23 +3,23 @@
     {
       "cin": "1234",
       "name": "jawharfff",
-      "type": "teacher",
+      "type": "Teacher",
       "createdDate": "1/1/1999",
       "id": "1234"
     },
     {
       "cin": "12345678",
       "name": "skdjfqsjkg",
-      "type": "etud",
+      "type": "Student",
       "createdDate": "12/12/2022",
       "id": "b336"
     },
     {
-      "cin": "159159",
-      "name": "eqrkg,qeklr",
-      "type": "qeroqg",
-      "createdDate": "12/12/12",
-      "id": "0094"
+      "id": "4c61",
+      "cin": null,
+      "name": "omar",
+      "type": "Student",
+      "createdDate": null
     }
   ],
   "EVTS": [
@@ -77,6 +77,14 @@
       "DateDebut": "2026-03-31T23:00:00.000Z",
       "DateFin": "2026-04-08T23:00:00.000Z",
       "Lieu": "hhh",
+      "Actions": null
+    },
+    {
+      "id": "e6dc",
+      "Titre": "aa",
+      "DateDebut": "2026-04-03T23:00:00.000Z",
+      "DateFin": "2026-04-10T23:00:00.000Z",
+      "Lieu": "9libiya",
       "Actions": null
     }
   ],
