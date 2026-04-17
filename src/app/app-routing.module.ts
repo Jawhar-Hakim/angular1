@@ -7,6 +7,7 @@ import { ToolsComponent } from './tools/tools.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { EventsComponent } from './events/events.component';
 import { LoginComponent } from './login/login.component';
+import { authGuard } from 'src/Services/authGuard';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
   },
   {
     path:"",
+    pathMatch:"full",
+    redirectTo:"login"
+  },
+  {
+    path:"login",
     pathMatch:"full",
     component:LoginComponent
   },
@@ -42,12 +48,14 @@ const routes: Routes = [
   {
     path:"events",
     pathMatch:"full",
-    component:EventsComponent
+    component:EventsComponent,
+    canActivate:[authGuard]
   },
   {
     path:"member",
     pathMatch:"full",
-    component:MemberComponent
+    component:MemberComponent,
+    canActivate:[authGuard]
   },
   {
     path:"**",
