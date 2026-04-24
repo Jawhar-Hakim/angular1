@@ -5,21 +5,69 @@
       "name": "jawharfff",
       "type": "Teacher",
       "createdDate": "1/1/1999",
-      "id": "1234"
+      "id": "1234",
+      "tab_Events": [
+        {
+          "id": "1",
+          "titre": "conf",
+          "datedebut": "15/12/2025",
+          "datefin": "20/12/2025",
+          "lieu": "sfax"
+        },
+        {
+          "id": "1",
+          "titre": "conf",
+          "datedebut": "15/12/2025",
+          "datefin": "20/12/2025",
+          "lieu": "sfax"
+        }
+      ]
     },
     {
       "cin": "12345678",
       "name": "skdjfqsjkg",
       "type": "Student",
       "createdDate": "12/12/2022",
-      "id": "b336"
+      "id": "b336",
+      "tab_Events": [
+        {
+          "id": "1",
+          "titre": "conf",
+          "datedebut": "15/12/2025",
+          "datefin": "20/12/2025",
+          "lieu": "sfax"
+        },
+        {
+          "id": "1",
+          "titre": "conf",
+          "datedebut": "15/12/2025",
+          "datefin": "20/12/2025",
+          "lieu": "sfax"
+        }
+      ]
     },
     {
       "id": "4c61",
       "cin": null,
       "name": "omar",
       "type": "Student",
-      "createdDate": null
+      "createdDate": null,
+      "tab_Events": [
+        {
+          "id": "1",
+          "titre": "conf",
+          "datedebut": "15/12/2025",
+          "datefin": "20/12/2025",
+          "lieu": "sfax"
+        },
+        {
+          "id": "1",
+          "titre": "conf",
+          "datedebut": "15/12/2025",
+          "datefin": "20/12/2025",
+          "lieu": "sfax"
+        }
+      ]
     }
   ],
   "EVTS": [
@@ -60,7 +108,7 @@
       "Titre": "qdsf",
       "DateDebut": "2012-12-11T23:00:00.000Z",
       "DateFin": "2012-12-13T23:00:00.000Z",
-      "Lieu": "jjj",
+      "Lieu": "sfax",
       "Actions": null
     },
     {
@@ -68,7 +116,7 @@
       "Titre": "ji",
       "DateDebut": "2026-04-02T23:00:00.000Z",
       "DateFin": "2026-04-09T23:00:00.000Z",
-      "Lieu": "jj",
+      "Lieu": "sfax",
       "Actions": null
     },
     {

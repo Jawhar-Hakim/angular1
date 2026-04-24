@@ -41,8 +41,8 @@
     <canvas
       baseChart
       [type]="'line'"
-      [datasets]="chartData"
-      [labels]="chartLabels"
+      [datasets]="chartDataM"
+      [labels]="chartLabelsM"
       [options]="chartOptions"
     >
     </canvas>
@@ -53,6 +53,16 @@
       [type]="'pie'"
       [datasets]="chartDataPie"
       [labels]="chartLabelsPie"
+      [options]="chartOptions"
+    >
+    </canvas>
+  </div>
+  <div class="chart-wrapper">
+    <canvas
+      baseChart
+      [type]="'pie'"
+      [datasets]="chartDataPie2"
+      [labels]="chartLabelsPie2"
       [options]="chartOptions"
     >
     </canvas>

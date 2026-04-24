@@ -24,6 +24,14 @@ export class DashboardComponent implements OnInit {
     }
   ];
   chartLabels:String[] = [];
+  chartDataM: ChartDataset[] = [
+    {
+      // ⤵️ Add these
+      label: 'Members',
+      data: [  ]
+    }
+  ];
+  chartLabelsM:String[] = [];
   chartDataPie: ChartDataset[] = [
     {
       // ⤵️ Add these
@@ -32,6 +40,13 @@ export class DashboardComponent implements OnInit {
   ];
   chartLabelsPie: string[] = ['Teacher'," Student"];
   chartOptions: ChartOptions = {};
+   chartDataPie2: ChartDataset[] = [
+    {
+      // ⤵️ Add these
+      data: [ this.NbTeacher,this.NbStudent]
+    }
+  ];
+  chartLabelsPie2: String[] = ['Teacher'," Student"];
 
   constructor(
     private memberService: MemberService,
@@ -54,6 +69,14 @@ export class DashboardComponent implements OnInit {
           data: [this.NbTeacher,this.NbStudent]
         }
       ]
+      const names=members.map(m=>m.name)
+      this.chartLabelsM=names
+      const count2=members.map(m=>m.tab_Events).length
+      this.chartDataM=[
+        {
+          data:[count2]
+        }
+      ]
     });
 
     this.evtService.GetAllEvts().subscribe((evts)=>{
@@ -71,6 +94,14 @@ export class DashboardComponent implements OnInit {
           data: Object.values(counts)
         }
       ];
+      const titre=[...new Set(evts.map(e=>e.Titre))]
+      this.chartLabelsPie2=titre
+      const count3=titre.map(e=>evts.filter(L=>L.Titre==e).length)
+      this.chartDataPie2=[
+        {
+          data:count3
+        }
+      ]
     });
   }
 }
