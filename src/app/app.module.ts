@@ -36,6 +36,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { LoginComponent } from './login/login.component';
 import { NgChartsModule } from 'ng2-charts';
 import { MemberListComponent } from './member-list/member-list.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { MemberListComponent } from './member-list/member-list.component';
   ],
   imports: [
     BrowserModule,
+    MatSelectModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTableModule,
