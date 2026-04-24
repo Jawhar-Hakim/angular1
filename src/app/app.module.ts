@@ -35,6 +35,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { LoginComponent } from './login/login.component';
 import { NgChartsModule } from 'ng2-charts';
+import { MemberListComponent } from './member-list/member-list.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { NgChartsModule } from 'ng2-charts';
     DashboardComponent,
     EvtCreateCompComponent,
     LoginComponent,
+    MemberListComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { EvtService } from 'src/Services/evt.service';
 import { EvtCreateCompComponent } from '../evt-create-comp/evt-create-comp.component';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { MemberListComponent } from '../member-list/member-list.component';
 
 @Component({
   selector: 'app-events',
@@ -13,6 +14,7 @@ import { MatSort } from '@angular/material/sort';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements AfterViewInit{
+
   constructor(private ES:EvtService,private dialog:MatDialog){}
   displayedColumns: string[] = ['id', 'Titre', 'DateDebut', 'DateFin', 'Lieu','Actions'];
   dataSource=new MatTableDataSource<Evt>()
@@ -55,4 +57,9 @@ export class EventsComponent implements AfterViewInit{
       })
     })
   }
+  openAssign(evt: Evt) {
+  const param = new MatDialogConfig();
+    param.data=evt
+    let x = this.dialog.open(MemberListComponent,param)
+}
 }
